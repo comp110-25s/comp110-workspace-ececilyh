@@ -1,0 +1,24 @@
+"""A Valentine's Day Flower Game"""
+
+__author__ = "Emma Hedinger"
+
+
+def loves_me(petals: int) -> bool:
+    if petals % 2 == 0:
+        print(f"Try again with a different number!")
+        return False
+    else:
+        if petals <= 1:
+            return True
+        return loves_me_not(petals=petals - 1)
+
+
+def loves_me_not(petals: int) -> bool:
+    if petals <= 1:
+        return False
+    return loves_me(petals=petals - 1)
+
+
+result = loves_me(2)
+if result != False:
+    print(f"It's {loves_me(2)} that Emma loves Abby!")
