@@ -19,6 +19,6 @@ def loves_me_not(petals: int) -> bool:
     return loves_me(petals=petals - 1)
 
 
-result = loves_me(2)
+result = loves_me(100)
 if result != False:
-    print(f"It's {loves_me(2)} that Emma loves Abby!")
+    print(f"It's {loves_me(100)} that Emma loves Abby!")
