@@ -42,7 +42,7 @@ def favorite_color(names_colors: dict[str, str]) -> str:
     return max_color
 
 
-def bin_len(bin_list: list[str]) -> dict[int, str]:
+def bin_len(bin_list: list[str]) -> dict[int, dict]:
     index = 0
     bin_dictionary: dict[int, dict] = {}
     while index < len(bin_list):

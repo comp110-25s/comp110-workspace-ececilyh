@@ -4,9 +4,10 @@ ___author___: "730551362"
 
 import pytest
 
-from exercises.ex03.dictionary import invert
+from exercises.ex03.dictionary import invert, favorite_color, count, bin_len
 
 
+# Testing Invert
 def test_invert() -> None:
     dictionary_test = {"1": "Emma", "2": "Cecily"}  # Creating dictionary test
     invert(dictionary_test) == {
@@ -26,22 +27,19 @@ def test_invert3() -> None:
         invert(my_dictionary)
 
 
-from exercises.ex03.dictionary import favorite_color
-from exercises.ex03.dictionary import count
-
-
+# Testing Favorite_Color
 def test_favorite_color2() -> None:
     favcolor_test2 = {
         "Emma": "Blue",
         "Abby": "Pink",
         "Sophia": "Blue",
     }  # Creating dictionary test
-    favorite_color(favcolor_test2) == {"Blue"}
+    favorite_color(favcolor_test2) == "Blue"
 
 
 def test_favorite_color() -> None:
     favcolor_test = {}  # Creating dictionary test
-    favorite_color(favcolor_test) == {}
+    favorite_color(favcolor_test) == ""
 
 
 def test_favorite_color3() -> None:
@@ -51,12 +49,26 @@ def test_favorite_color3() -> None:
         "S": "Blue",
         "B": "Pink",
     }  # Creating dictionary test
-    favorite_color(favcolor_test3) == {"Blue"}
+    favorite_color(favcolor_test3) == "Blue"
 
 
-from exercises.ex03.dictionary import bin_len
+# Testing Count
+def test_count() -> None:
+    list_test1 = ["Blue", "Pink", "Purple", "Pink"]
+    count(list_test1) == {"Blue": 1, "Pink": 2, "Purple": 1}
 
 
+def test_count2() -> None:
+    list_test2 = []
+    count(list_test2) == {}
+
+
+def test_count3() -> None:
+    list_test3 = ["Blue", "Blue", "Purple", "Blue"]
+    count(list_test3) == {"Blue": 3, "Purple": 1}
+
+
+# Testing Bin_len
 def test_bin_len() -> None:
     bin_dictionary_test = ["the", "quick", "fox"]
     bin_len(bin_dictionary_test) == {3: {"the", "fox"}, 5: {"quick"}}
