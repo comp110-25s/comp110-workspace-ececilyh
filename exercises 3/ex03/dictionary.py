@@ -25,6 +25,11 @@ def count(list: list[str]) -> dict[str, int]:
     return final_dictionary
 
 
+# Max number comparison!!
+
+# how many occurances per color
+
+
 def favorite_color(names_colors: dict[str, str]) -> str:
     color_dictionary: dict[str, int] = {}
     color_list = []

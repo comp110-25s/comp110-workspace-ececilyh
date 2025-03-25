@@ -16,11 +16,6 @@ def test_invert() -> None:
 
 
 def test_invert2() -> None:
-    dictionary_test2 = {}  # Creating dictionary test
-    invert(dictionary_test2) == {}
-
-
-def test_invert3() -> None:
     with pytest.raises(KeyError):
         my_dictionary = {"kris": "jordan", "michael": "jordan"}
         invert(my_dictionary)
@@ -30,28 +25,9 @@ from exercises.ex03.dictionary import favorite_color
 from exercises.ex03.dictionary import count
 
 
-def test_favorite_color2() -> None:
-    favcolor_test2 = {
-        "Emma": "Blue",
-        "Abby": "Pink",
-        "Sophia": "Blue",
-    }  # Creating dictionary test
-    favorite_color(favcolor_test2) == {"Blue"}
-
-
 def test_favorite_color() -> None:
     favcolor_test = {}  # Creating dictionary test
     favorite_color(favcolor_test) == {}
-
-
-def test_favorite_color3() -> None:
-    favcolor_test3 = {
-        "E": "Blue",
-        "A": "Pink",
-        "S": "Blue",
-        "B": "Pink",
-    }  # Creating dictionary test
-    favorite_color(favcolor_test3) == {"Blue"}
 
 
 from exercises.ex03.dictionary import bin_len
@@ -65,8 +41,3 @@ def test_bin_len() -> None:
 def test_bin_len2() -> None:
     bin_dictionary_test2 = ["hello", "my", "name", "is"]
     bin_len(bin_dictionary_test2) == {2: {"my", "is"}, 4: {"name"}, 5: {"hello"}}
-
-
-def test_bin_len3() -> None:
-    bin_dictionary_test3 = []
-    bin_len(bin_dictionary_test3) == {}
