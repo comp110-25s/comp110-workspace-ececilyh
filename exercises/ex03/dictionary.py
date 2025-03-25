@@ -52,4 +52,5 @@ def bin_len(bin_list: list[str]) -> dict[int, str]:
         else:
             bin_dictionary[length].add(bin_list[index])
         index += 1
+
     return bin_dictionary
