@@ -1,30 +1,33 @@
+import pytest
+from exercises.ex03.dictionary import invert, favorite_color, count, bin_len
+
 """Testing  Dictionary Functions"""
 
-___author___: "730551362"
-
-import pytest
-
-from exercises.ex03.dictionary import invert, favorite_color, count, bin_len
+___author___ = "730551362"
 
 
 # Testing Invert
 def test_invert() -> None:
-    dictionary_test = {"1": "Emma", "2": "Cecily"}  # Creating dictionary test
-    invert(dictionary_test) == {
+    switch = {"1": "Emma", "2": "Cecily"}
+    assert invert(switch) == {
         "Emma": "1",
         "Cecily": "2",
-    }  # Passing it into invert (Checking that they equal each other!)
+    }  # Use case that tests that the function inverts correctly.
 
 
 def test_invert2() -> None:
-    dictionary_test2 = {}  # Creating dictionary test
-    invert(dictionary_test2) == {}
+    switch = {}  # Edge
+    assert (
+        invert(switch) == {}
+    )  # Edge case that tests that the function correctly responds to an empty input.
 
 
 def test_invert3() -> None:
     with pytest.raises(KeyError):
-        my_dictionary = {"kris": "jordan", "michael": "jordan"}
-        invert(my_dictionary)
+        switch = {"kris": "jordan", "michael": "jordan"}
+        assert invert(
+            switch
+        )  # Use case that tests that the function correctly responds to incorrect inputs.
 
 
 # Testing Favorite_Color
@@ -33,13 +36,13 @@ def test_favorite_color2() -> None:
         "Emma": "Blue",
         "Abby": "Pink",
         "Sophia": "Blue",
-    }  # Creating dictionary test
-    favorite_color(favcolor_test2) == "Blue"
+    }
+    assert favorite_color(favcolor_test2) == "Blue"  #
 
 
 def test_favorite_color() -> None:
-    favcolor_test = {}  # Creating dictionary test
-    favorite_color(favcolor_test) == ""
+    favcolor_test = {}
+    assert favorite_color(favcolor_test) == ""  #
 
 
 def test_favorite_color3() -> None:
@@ -48,37 +51,44 @@ def test_favorite_color3() -> None:
         "A": "Pink",
         "S": "Blue",
         "B": "Pink",
-    }  # Creating dictionary test
-    favorite_color(favcolor_test3) == "Blue"
+    }
+    assert favorite_color(favcolor_test3) == "Blue"  #
 
 
 # Testing Count
 def test_count() -> None:
     list_test1 = ["Blue", "Pink", "Purple", "Pink"]
-    count(list_test1) == {"Blue": 1, "Pink": 2, "Purple": 1}
+    assert count(list_test1) == {"Blue": 1, "Pink": 2, "Purple": 1}  #
 
 
 def test_count2() -> None:
     list_test2 = []
-    count(list_test2) == {}
+    assert count(list_test2) == {}  #
 
 
 def test_count3() -> None:
     list_test3 = ["Blue", "Blue", "Purple", "Blue"]
-    count(list_test3) == {"Blue": 3, "Purple": 1}
+    assert count(list_test3) == {"Blue": 3, "Purple": 1}  #
 
 
 # Testing Bin_len
 def test_bin_len() -> None:
-    bin_dictionary_test = ["the", "quick", "fox"]
-    bin_len(bin_dictionary_test) == {3: {"the", "fox"}, 5: {"quick"}}
+    bin_dictionary_test = ["the", "quick"]
+    assert bin_len(bin_dictionary_test) == {
+        3: {"the"},
+        5: {"quick"},
+    }  # Use case that tests that the function counts different lengths correctly.
 
 
 def test_bin_len2() -> None:
-    bin_dictionary_test2 = ["hello", "my", "name", "is"]
-    bin_len(bin_dictionary_test2) == {2: {"my", "is"}, 4: {"name"}, 5: {"hello"}}
+    bin_dictionary_test2 = ["Hey", "I'm", "Ted"]
+    assert bin_len(bin_dictionary_test2) == {
+        3: {"Hey", "I'm", "Ted"},
+    }  # Use case that tests that the function counts equal lengths correctly.
 
 
 def test_bin_len3() -> None:
     bin_dictionary_test3 = []
-    bin_len(bin_dictionary_test3) == {}
+    assert (
+        bin_len(bin_dictionary_test3) == {}
+    )  # Edge case that tests that the function correctly responds to an empty input.
