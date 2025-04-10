@@ -1,10 +1,10 @@
 """File to define Fish class."""
 
-___author___: str = "730551362"
+___author___ = "730551362"
 
 
 class Fish:
-    """Creating the Fish class"""
+    """Creating the Fish class."""
 
     age: int
 

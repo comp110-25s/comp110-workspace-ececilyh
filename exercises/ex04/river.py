@@ -1,13 +1,13 @@
 """File to define River class."""
 
-___author___: str = "730551362"
+___author___ = "730551362"
 
 from exercises.EX04.fish import Fish
 from exercises.EX04.bear import Bear
 
 
 class River:
-    """Creating the River class"""
+    """Creating the River class."""
 
     day: int
     bears: list[Bear]
@@ -30,11 +30,11 @@ class River:
         bear_idx = 0
         fish_new: list[Fish] = []
         bear_new: list[Bear] = []
-        while fish_idx >= len(self.fish):
+        while fish_idx < len(self.fish):
             if self.fish[fish_idx].age <= 3:
                 fish_new.append(self.fish[fish_idx])
             fish_idx += 1
-        while bear_idx >= len(self.bears):
+        while bear_idx < len(self.bears):
             if self.bears[bear_idx].age <= 5:
                 bear_new.append(self.bears[bear_idx])
             bear_idx += 1
@@ -59,7 +59,7 @@ class River:
             if len(self.fish) >= 5:
                 self.remove_fish(amount=3)
                 bear.eat(num_fish=3)
-            return None
+        return None
 
     # Creating new list, going through old list for the surviving list,
     # then replacing.

@@ -1,6 +1,6 @@
-"""Simulating a River"""
+"""Simulating a River."""
 
-___author___: str = "730551362"
+___author___ = "730551362"
 
 from exercises.EX04.river import River
 
