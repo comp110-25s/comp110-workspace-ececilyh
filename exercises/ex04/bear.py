@@ -1,7 +1,11 @@
 """File to define Bear class."""
 
+___author___: str = "730551362"
+
 
 class Bear:
+    """Creating the Bear class"""
+
     age: int
     hunger_score: int
 

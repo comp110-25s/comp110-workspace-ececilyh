@@ -1,7 +1,11 @@
 """File to define Fish class."""
 
+___author___: str = "730551362"
+
 
 class Fish:
+    """Creating the Fish class"""
+
     age: int
 
     def __init__(self):

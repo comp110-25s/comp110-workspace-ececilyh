@@ -1,10 +1,14 @@
 """File to define River class."""
 
+___author___: str = "730551362"
+
 from exercises.EX04.fish import Fish
 from exercises.EX04.bear import Bear
 
 
 class River:
+    """Creating the River class"""
+
     day: int
     bears: list[Bear]
     fish: list[Fish]
@@ -45,25 +49,29 @@ class River:
             self.fish.pop(0)
             i += 1
 
+    # Need to call it on self because self IS a River...
+    # this means it applies to the entire group.
+    # Class has a capital.
+
     def bears_eating(self):
         """Feeding bears."""
         for bear in self.bears:
             if len(self.fish) >= 5:
-                self.remove_fish(
-                    amount=3
-                )  # Need to call it on self because self IS a River....this means it applies to the entire group.
-                bear.eat(num_fish=3)  # Class has a capital.
+                self.remove_fish(amount=3)
+                bear.eat(num_fish=3)
             return None
 
+    # Creating new list, going through old list for the surviving list,
+    # then replacing.
+    # If accessing attribute, just put the dot and name.
+    # Variable (that rep object).method
     def check_hunger(
         self,
-    ):  # Creating new list, going through old list for the surviving list, replacing.
+    ):
         """Checking the hunger scores of each bear."""
         bear_new: list[Bear] = []
         for bear in self.bears:
-            if (
-                bear.hunger_score >= 0
-            ):  # If accessing attribute, just put the dot and name. Variable (that rep object).method
+            if bear.hunger_score >= 0:
                 bear_new.append(bear)
         self.bears = bear_new
         return None
