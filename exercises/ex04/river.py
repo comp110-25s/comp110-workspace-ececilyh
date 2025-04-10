@@ -1,6 +1,6 @@
 """File to define River class."""
 
-___author___ = "730551362"
+___author___: "730551362"
 
 from exercises.EX04.fish import Fish
 from exercises.EX04.bear import Bear
@@ -78,7 +78,7 @@ class River:
 
     def repopulate_fish(self):
         """Modeling the river's fish population."""
-        num_fish = len(self.bears)
+        num_fish = len(self.fish)
         n = (num_fish // 2) * 4
         i = 0
         while i < n:
