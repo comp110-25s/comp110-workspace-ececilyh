@@ -1,6 +1,6 @@
 """File to define Fish class."""
 
-___author___: "730551362"
+___author___ = "730551362"
 
 
 class Fish:

@@ -1,12 +1,12 @@
 """File to define River class."""
 
-___author___: "730551362"
+___author___ = "730551362"
 
 from exercises.EX04.fish import Fish
 from exercises.EX04.bear import Bear
 
 
-class River:
+class River:x   
     """Creating the River class."""
 
     day: int
