@@ -1,7 +1,5 @@
 """File to define Bear class."""
 
-___author___ = "730551362"
-
 
 class Bear:
     """Creating the Bear class."""
