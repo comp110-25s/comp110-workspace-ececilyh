@@ -6,15 +6,15 @@ class Bear:
     hunger_score: int
 
     def __init__(self):
-        return None
+        """Initializing the ages and hunger scores of the Bear class."""
+        self.age: int = 0
+        self.hunger_score: int = 0
 
     def one_day(self) -> None:
-        hunger_score -= 1
-        age += 1
+        """Modeling one day in a bear's life on the river."""
+        self.hunger_score -= 1
+        self.age += 1
 
     def eat(self, num_fish: int) -> None:
-        hunger_score += num_fish
-
-    def __init__(self):
-        self.age = 0
-        self.hunger_score = 0
+        """Defining what happens when the bear eats."""
+        self.hunger_score += num_fish

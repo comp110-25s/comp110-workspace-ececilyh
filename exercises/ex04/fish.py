@@ -5,10 +5,9 @@ class Fish:
     age: int
 
     def __init__(self):
-        return None
+        """Initalizing the age of a fish."""
+        self.age: int = 0
 
     def one_day(self) -> None:
-        age += 1
-
-    def __init__(self):
-        self.age = 0
+        """Modeling one day in a fish's life on the river."""
+        self.age += 1
