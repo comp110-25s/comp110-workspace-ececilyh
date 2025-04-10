@@ -89,7 +89,7 @@ class River:
     def repopulate_bears(self):
         """Modeling the river's bear population."""
         num_bear = len(self.bears)
-        n = (num_bear // 2) * 4
+        n = num_bear // 2
         i = 0
         while i < n:
             self.bears.append(Bear())
